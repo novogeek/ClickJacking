@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JS Clickjacking</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<form id="frmClickJack" runat="server">
+    <div>
+    <h4>What is Clickjacking?</h4> 
+    <span><input type="button" value="Super Like!" /></span>
+     <p> Clickjacking is a malicious technique of tricking Web users into revealing confidential information or taking control of their computer while clicking on seemingly innocuous web pages.[1][2][3][4] A vulnerability across a variety of browsers and platforms, a clickjacking takes the form of embedded code or script that can execute without the user's knowledge, such as clicking on a button that appears to perform another function.[5]
+The term "clickjacking" was coined by Jeremiah Grossman and Robert Hansen in 2008. The exploit is also known as UI redressing.
+Clickjacking can be understood as an instance of the confused deputy problem.</p>
+<h5>Description:</h5>
+<p>Clickjacking is possible because seemingly harmless features of HTML web pages can be employed to perform unexpected actions.
+A clickjacked page tricks a user into performing undesired actions by clicking on a concealed link. On a clickjacked page, the attackers show a set of dummy buttons, then load another page over it in a transparent layer. The users think that they are clicking the visible buttons, while they are actually performing actions on the hidden page. The hidden page may be an authentic page, and therefore the attackers can trick users into performing actions which the users never intended. 
+There is no way of tracing such actions later, as the user was genuinely authenticated on the other page.</p>
+
+<h5>Examples:</h5>
+<p>A user might receive an email with a link to a video about a news item, but another valid page, say a product page on amazon.com, can be "hidden" on top or underneath the "PLAY" button of the news video. The user tries to "play" the video but actually "buys" the product from Amazon.
+Other known exploits include:
+tricking users into enabling their webcam and microphone through Flash (which has since been corrected by Adobe);
+tricking users into making their social networking profile information public;
+making users follow someone on Twitter;[7]
+share links on Facebook[8][9]
+</p>
+ <div>Source: WikiPedia</div>
+    </div>
+  
+    
+  
+    </form>
+
+    <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script src="js/clickjack.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>

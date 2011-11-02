@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Clickjacking Demo</title>
+</head>
+<body>
+    <form id="frmClickJack" runat="server">
+        <div>
+            <h3>It's all about framing!</h3>
+           <iframe id="attackingFrame" src="http://localhost/genuine/default.aspx" scrolling="no" class="clickJackFrame"/>
+           
+           </iframe>
+           </div>
+    </form>
+</body>
+</html>
+

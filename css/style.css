@@ -1,0 +1,20 @@
+body{ font:"1em verdana"; margin: 50px;}
+ul{margin: 0; padding: 0;}
+ul li {margin: 2px; position: relative; padding: 2px 0;  list-style: none;}
+ul#ulLike {display: inline; margin: 0 5px;}
+ul#ulLike li{float: left; list-style:none; padding: 2px 0;}
+
+.clickJackFrame{
+    border: 0px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    opacity: 0;
+    top: 186px;
+    left: 47px;
+}
+
+input {margin: 0px 5px;}
+#btnSubmit {width: 70px;}
