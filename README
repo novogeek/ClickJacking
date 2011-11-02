@@ -4,4 +4,6 @@ Regarding the code, the files attack0-3.htm contains iframes which point to a ge
 
 The genuine webpage has a vote button (The idea is to mimic facebook like button). It increments vote count on every click, stores the value in session and displays it on screen. We will frame this genuine page and trick the user to click the vote button. Vote count displayed on screen will show that the button is clicked. 
 
+Live demo at: http://labs.novogeek.com/DevCon2011/clickjack/ 
+
 I have written a jQuery plugin (js/clickjack.js) to ease clickjacking ;) It just accepts a URL to be iframed and puts the target page under the cursor! Yay!!
